@@ -46,10 +46,10 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
-const links = document.querySelector("a");
-links.textContent = siteContent["nav"]["nav-item-1"];
+const link1 = document.querySelector("a");
+link1.textContent = siteContent["nav"]["nav-item-1"];
 
-const link2 = links.nextElementSibling;
+const link2 = link1.nextElementSibling;
 link2.textContent = siteContent["nav"]["nav-item-2"];
 
 const link3 = link2.nextElementSibling;
@@ -73,18 +73,18 @@ headerButton.textContent = siteContent["cta"]["button"];
 const headerPicture = document.querySelector("#cta-img");
 headerPicture.setAttribute("src", siteContent["cta"]["img-src"]);
 
-// -----------------------  Main Content --------------------------------
+// -----------------------  Top Content --------------------------------
 
-const featuresHeader = document.querySelector(".text-content:nth-of-type(1) h4");
+const featuresHeader = document.querySelector(".top-content .text-content:nth-of-type(1) h4");
 featuresHeader.textContent = siteContent["main-content"]["features-h4"];
 
-const featuresPara = document.querySelector(".text-content:nth-of-type(1) p");
+const featuresPara = document.querySelector(".top-content .text-content:nth-of-type(1) p");
 featuresPara.textContent = siteContent["main-content"]["features-content"];
 
-const aboutHeader = document.querySelector(".text-content:nth-of-type(2) h4");
+const aboutHeader = document.querySelector(".top-content .text-content:nth-of-type(2) h4");
 aboutHeader.textContent = siteContent["main-content"]["about-h4"];
 
-const aboutPara = document.querySelector(".text-content:nth-of-type(2) p");
+const aboutPara = document.querySelector(".top-content .text-content:nth-of-type(2) p");
 aboutPara.textContent = siteContent["main-content"]["about-content"];
 
 // -----------------------------------------------------------------------
@@ -118,7 +118,7 @@ visionPara.textContent = siteContent["main-content"]["vision-content"];
 
 // -----------------------------------------------------------------------
 
-// Contact ---
+// Contact --v--
 
 const contactHeader = document.querySelector(".contact h4");
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
@@ -129,4 +129,32 @@ contactAddress.textContent = siteContent["contact"]["address"];
 const contactPhone = document.querySelector(".contact p:nth-of-type(2)");
 contactPhone.textContent = siteContent["contact"]["phone"];
 
-// const contactEmail
+const contactEmail = document.querySelector(".contact p:nth-of-type(3)");
+contactEmail.textContent = siteContent["contact"]["email"];
+
+// Footer --v--
+
+const footerContent = document.querySelector("footer p");
+footerContent.textContent = siteContent["footer"]["copyright"];
+
+
+// ------ Styling and adding ---------
+
+link1.style.color = "green";    // Not most efficient way?
+link2.style.color = "green";
+link3.style.color = "green";
+link4.style.color = "green";
+link5.style.color = "green";
+link6.style.color = "green";
+
+const extraLink1 = document.createElement("a")
+extraLink1.textContent = "Extra One";
+extraLink1.href = "#";
+document.querySelector("nav").appendChild(extraLink1);
+extraLink1.style.color = "green";
+
+const extraLink2 = document.createElement("a")
+extraLink2.textContent = "Extra Two";
+extraLink2.href = "#";
+document.querySelector("nav").appendChild(extraLink2);
+extraLink2.style.color = "green";
