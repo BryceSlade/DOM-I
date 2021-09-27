@@ -73,18 +73,60 @@ headerButton.textContent = siteContent["cta"]["button"];
 const headerPicture = document.querySelector("#cta-img");
 headerPicture.setAttribute("src", siteContent["cta"]["img-src"]);
 
-const topContent = document.querySelector(".top-content");
-const featuresHeader = topContent.querySelector(".text-content h4");
+// -----------------------  Main Content --------------------------------
+
+const featuresHeader = document.querySelector(".text-content:nth-of-type(1) h4");
 featuresHeader.textContent = siteContent["main-content"]["features-h4"];
 
-const featuresPara = topContent.querySelector(".text-content p");
+const featuresPara = document.querySelector(".text-content:nth-of-type(1) p");
 featuresPara.textContent = siteContent["main-content"]["features-content"];
 
-const aboutHeader = topContent.nextElementSibling;
-aboutHeader.textConcent = siteContent["main-content"]["about-h4"];
+const aboutHeader = document.querySelector(".text-content:nth-of-type(2) h4");
+aboutHeader.textContent = siteContent["main-content"]["about-h4"];
+
+const aboutPara = document.querySelector(".text-content:nth-of-type(2) p");
+aboutPara.textContent = siteContent["main-content"]["about-content"];
+
+// -----------------------------------------------------------------------
+
+
 
 const contentPicture = document.querySelector("#middle-img");
-contentPicture.setAttribute(
-  "src",
-  siteContent["main-content"]["middle-img-src"]
-);
+contentPicture.setAttribute("src",siteContent["main-content"]["middle-img-src"]);
+
+
+
+// ----------------------- Bottom Content --------------------------------
+
+const servicesHeader = document.querySelector(".bottom-content .text-content:nth-of-type(1) h4");
+servicesHeader.textContent = siteContent["main-content"]["services-h4"];
+
+const servicesPara = document.querySelector(".bottom-content .text-content:nth-of-type(1) p");
+servicesPara.textContent = siteContent["main-content"]["services-content"];
+
+const productHeader = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+productHeader.textContent = siteContent["main-content"]["product-h4"];
+
+const productPara = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+productPara.textContent = siteContent["main-content"]["product-content"];
+
+const visionHeader = document.querySelector(".bottom-content .text-content:nth-of-type(3) h4")
+visionHeader.textContent = siteContent["main-content"]["vision-h4"];
+
+const visionPara = document.querySelector(".bottom-content .text-content:nth-of-type(3) p")
+visionPara.textContent = siteContent["main-content"]["vision-content"];
+
+// -----------------------------------------------------------------------
+
+// Contact ---
+
+const contactHeader = document.querySelector(".contact h4");
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+const contactAddress = document.querySelector(".contact p:nth-of-type(1)");
+contactAddress.textContent = siteContent["contact"]["address"];
+
+const contactPhone = document.querySelector(".contact p:nth-of-type(2)");
+contactPhone.textContent = siteContent["contact"]["phone"];
+
+// const contactEmail
